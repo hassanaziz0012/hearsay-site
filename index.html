@@ -9,6 +9,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;900&display=swap" rel="stylesheet">
+<!-- Google tag (GTM container GTM-N92G9M5M). -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N92G9M5M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- Counts download clicks as the page's conversion event. -->
+<script>
+  addEventListener('click', (e) => {
+    const link = e.target.closest && e.target.closest('a[href*="/releases/latest"]');
+    if (link) gtag('event', 'download', { link_text: link.textContent.trim() });
+  });
+</script>
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root {
